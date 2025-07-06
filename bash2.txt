@@ -1,0 +1,119 @@
+1. Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ cd ~
+
+2. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ mkdir test3
+
+3. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ cd ~/test3
+
+Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ printf "row1\nrow2\nrow3\nrow4\n" > 4.txt
+
+Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ printf "row1\nrow2\nrow3\nrow4\n" > 5.txt
+
+Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ printf "row1\nrow2\nrow3\nrow4\n" > 6.txt
+
+4. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ grep "row2" 5.txt
+row2
+
+5. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ grep "row" ~/test3/*
+/c/Users/Kristina/test3/4.txt:row1
+/c/Users/Kristina/test3/4.txt:row2
+/c/Users/Kristina/test3/4.txt:row3
+/c/Users/Kristina/test3/4.txt:row4
+/c/Users/Kristina/test3/5.txt:row1
+/c/Users/Kristina/test3/5.txt:row2
+/c/Users/Kristina/test3/5.txt:row3
+/c/Users/Kristina/test3/5.txt:row4
+/c/Users/Kristina/test3/6.txt:row1
+/c/Users/Kristina/test3/6.txt:row2
+/c/Users/Kristina/test3/6.txt:row3
+/c/Users/Kristina/test3/6.txt:row4
+
+6. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ grep -c "row" ~/test3/6.txt
+4
+
+7. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ find ~/test3 -name "5.txt" -type f
+/c/Users/Kristina/test3/5.txt
+
+8.Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ find ~/test3 -name "5.txt" -type f -exec rm {} \;
+
+9. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ echo "test" > ~/test3/4.txt
+
+10. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ sed -i 's/test/fail/g' ~/test3/4.txt
+
+11.Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ echo "test" >> ~/test3/4.txt
+
+12. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ ps aux
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     2041    1671    2041      40432  cons1     197609 18:53:18 /usr/bin/ps
+     1671       1    1671      30256  cons1     197609 18:18:02 /usr/bin/bash    
+     1445       1    1445      36444  cons0     197609 17:43:42 /usr/bin/bash 
+
+
+13. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+ $ kill 666   
+
+14. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ ping rusau.net
+
+Обмен пакетами с rusau.net [5.181.161.75] с 32 байтами данных:
+Ответ от 5.181.161.75: число байт=32 время=87мс TTL=50
+Ответ от 5.181.161.75: число байт=32 время=86мс TTL=50
+Ответ от 5.181.161.75: число байт=32 время=78мс TTL=52
+Ответ от 5.181.161.75: число байт=32 время=49мс TTL=51
+
+Статистика Ping для 5.181.161.75:
+    Пакетов: отправлено = 4, получено = 4, потеряно = 0
+    (0% потерь)
+Приблизительное время приема-передачи в мс:
+    Минимальное = 49мсек, Максимальное = 87 мсек, Среднее = 75 мсек
+
+15.Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ ping -n 5 rusau.net
+
+Обмен пакетами с rusau.net [5.181.161.75] с 32 байтами данных:
+Ответ от 5.181.161.75: число байт=32 время=78мс TTL=52
+Ответ от 5.181.161.75: число байт=32 время=76мс TTL=54
+Ответ от 5.181.161.75: число байт=32 время=77мс TTL=52
+Ответ от 5.181.161.75: число байт=32 время=77мс TTL=52
+Ответ от 5.181.161.75: число байт=32 время=77мс TTL=52
+
+Статистика Ping для 5.181.161.75:
+    Пакетов: отправлено = 5, получено = 5, потеряно = 0
+    (0% потерь)
+Приблизительное время приема-передачи в мс:
+    Минимальное = 76мсек, Максимальное = 78 мсек, Среднее = 77 мсек
+
+
+16. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ curl -X GET "https://petstore.swagger.io/v2/pet/findByStatus?status=sold" -H "accept: application/json"
+[{"id":848720,"category":{"id":56678,"name":"rKEXDvxL"},"name":"doggie","photoUrls":["foSQcG"],"tags":[{"id":875952,"name":"yZxPPsnM"}],"status":"sold"},{"id":241382,"category":{"id":502523,"name":"GZVLXxcN"},"name":"doggie","photoUrls":["nnEXdk"],"tags":[{"id":813248,"name":"WysluYyW"}],"status":"sold"},{"id":9223372036854742665,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":9223372036854742687,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":183771,"category":{"id":499024,"name":"pgrJLUFQ"},"name":"doggie","photoUrls":["IpiOKg"],"tags":[{"id":733256,"name":"LyIxhzUH"}],"status":"sold"},{"id":864734,"category":{"id":851305,"name":"bpeSvKQE"},"name":"doggie","photoUrls":["qGjoqG"],"tags":[{"id":901518,"name":"ILFPPbYr"}],"status":"sold"},{"id":9223372036854742757,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":9223372036854742782,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":434,"category":{"id":0,"name":"string"},"name":"cattie","photoUrls":["string"],"tags":[{"id":0,"name":"cat"}],"status":"sold"},{"id":190439075079434,"category":{"id":0,"name":"test"},"name":"cattie","photoUrls":["string"],"tags":[{"id":0,"name":"cat"}],"status":"sold"},{"id":9223372036854742810,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":565,"category":{"id":0,"name":"string"},"name":"rabbit","photoUrls":["string"],"tags":[{"id":0,"name":"rabb"}],"status":"sold"},{"id":9223372036854742847,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":9223372036854742906,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident 
+esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":777,"photoUrls":[],"tags":[{"id":777,"name":"cat"}],"status":"sold"},{"id":20593238,"category":{"id":96650357,"name":"ut aute"},"name":"doggie","photoUrls":["in deserunt sit qui elit","do dolore"],"tags":[{"id":80489283,"name":"dolore elit aute Excepteur anim"},{"id":-29854588,"name":"enim"}],"status":"sold"},{"id":9223372036854742927,"name":"Emmet","photoUrls":[],"tags":[{"id":1,"name":"dalmatian"}],"status":"sold"},{"id":1234567,"category":{"id":35,"name":"caini"},"name":"Grivei update","photoUrls":[],"tags":[{"id":1,"name":"dalmatian"}],"status":"sold"},{"id":131313,"category":{"id":131313,"name":"qaengie"},"name":"suffer","photoUrls":["qaengie"],"tags":[{"id":131313,"name":"suffer1"}],"status":"sold"},{"id":9223372036854743002,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":9223372036854743111,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":9223372036854743159,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":9223372036854743175,"photoUrls":[],"tags":[],"status":"sold"},{"id":9223372036854743177,"photoUrls":[],"tags":[],"status":"sold"},{"id":9223372036854743181,"photoUrls":[],"tags":[],"status":"sold"},{"id":9223372036854743184,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":9223372036854743208,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":9223372036854743235,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"},{"id":13,"category":{"id":0,"name":"cats"},"photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"sold"},{"id":78488834653,"category":{"id":2,"name":"Cat"},"name":"bulka","photoUrls":["https://i.pinimg.com/originals/ff/d3/64/ffd364ea1702a40d7d35f949980bb284.jpg"],"tags":[{"id":1,"name":"Grey"}],"status":"sold"},{"id":9223372036854743286,"category":{"id":38441303,"name":"eu in"},"name":"doggie","photoUrls":["irure e","veniam proident esse id"],"tags":[{"id":-66678181,"name":"do pariatur"},{"id":12152260,"name":"exercitation sint"}],"status":"sold"}] 
+
+17. Kristina@DESKTOP-60KLNFC MINGW64 ~/test3
+$ curl -X POST "https://petstore.swagger.io/v2/user" \
+> -H "Content-Type: application/json" \
+> -d '{
+>   "id": 12345,
+>   "username": "Lola",
+>   "firstName": "Loli",
+>   "lastName": "Lali",
+>   "email": "newuser@example.com",
+>   "password": "password123",
+>   "phone": "+1234567890",
+>   "userStatus": 1
+> }'
+phone": "+1234567890",\x0a"userStatus": 1\x0a}';abad61a4-aa9b-44cf-904c-a1b3e17fbd4c{"code":200,"type":"unknown","message":"12345"}
