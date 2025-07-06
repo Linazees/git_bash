@@ -1,0 +1,76 @@
+1. Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ cd ~
+
+2. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ pwd
+/c/Users/Kristina
+
+3. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$  mkdir test1
+
+4. Kristina@DESKTOP-60KLNFC MINGW64 ~ 
+$ cd test1
+
+5. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ touch test1/1.txt test1/2.txt test1/3.txt
+
+6. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ Ls test1
+1.txt 2.txt 3.txt
+
+7. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ cd ~
+
+8. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ mkdir ~/test2
+
+9. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ rmdir ~/test2
+
+10. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ rm test1/2.txt
+
+11. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ mkdir ~/test3 
+
+Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ touch ~/test3/file1.txt ~/test3/file2.txt
+
+12. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ rm -r test3
+
+13. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ mkdir test4
+
+14. Kristina@DESKTOP-60KLNFC MINGW64 ~
+$ mv test1/1.txt test1/3.txt test4
+
+15. Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ echo "line 1" >> ~/test4/1.txt 
+
+Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ echo "line 2" >> ~/test4/1.txt 
+
+Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ echo "line 3" >> ~/test4/1.txt
+
+16. Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ cat ~/test4/1.txt 
+line 1
+line 2
+line 3
+
+17. Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ printf "line 1\nline 2\nline 3\n" >> ~/test4/3.txt
+
+18. Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ cat ~/test4/1.txt ~/test4/3.txt
+line 1
+line 2
+line 3
+line 1
+line 2
+line 3
+
+19. Kristina@DESKTOP-60KLNFC MINGW64 ~/bash
+$ printf "new line 1\nnew line 2\nnew line 3\n" > ~/test4/1.txt
